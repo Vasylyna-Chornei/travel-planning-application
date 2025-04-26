@@ -3,6 +3,7 @@ module com.vasylyna.travelplanningapplication {
     requires javafx.fxml;
     requires java.sql;
     requires jbcrypt;
+    requires java.desktop;
 
     opens com.vasylyna.travelplanningapplication to javafx.fxml;
     exports com.vasylyna.travelplanningapplication;

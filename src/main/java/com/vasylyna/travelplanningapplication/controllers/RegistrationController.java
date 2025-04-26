@@ -4,9 +4,14 @@ import com.vasylyna.travelplanningapplication.database.UserDAO;
 import com.vasylyna.travelplanningapplication.util.PasswordUtil;
 import com.vasylyna.travelplanningapplication.util.ValidationUtil;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import java.io.IOException;
 
 public class RegistrationController {
 
@@ -67,6 +72,24 @@ public class RegistrationController {
             setStatus("Реєстрація успішна!", "success");
         } else {
             setStatus("Такий користувач вже існує.", "error");
+        }
+    }
+
+    @FXML
+    protected void onLogin() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/vasylyna/travelplanningapplication/authorization/login.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Авторизація");
+            stage.setScene(new Scene(root));
+            stage.setMaximized(true);
+            stage.show();
+
+            Stage currentStage = (Stage) usernameField.getScene().getWindow();
+            currentStage.close();
+        } catch (IOException e) {
+            setStatus("Сталася помилка при відкритті вікна авторизації.", "error");
         }
     }
 }

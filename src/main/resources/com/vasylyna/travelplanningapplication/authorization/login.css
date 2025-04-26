@@ -30,7 +30,7 @@
     -fx-effect: dropshadow(gaussian, #6f6fc6, 5, 0.3, 0, 0);
 }
 
-.register-button {
+.login-button {
     -fx-background-color: #9696ea;
     -fx-text-fill: white;
     -fx-padding: 12px 28px;
@@ -40,11 +40,11 @@
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 4, 0.2, 2, 2);
 }
 
-.register-button:hover {
+.login-button:hover {
     -fx-background-color: #6f6fc6;
 }
 
-.register-button:pressed {
+.login-button:pressed {
     -fx-background-color: #4b4b9f;
 }
 

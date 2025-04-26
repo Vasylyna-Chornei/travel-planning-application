@@ -17,6 +17,9 @@
     <TextField fx:id="emailField" promptText="Електронна пошта" />
     <PasswordField fx:id="passwordField" promptText="Пароль" />
     <PasswordField fx:id="confirmPasswordField" promptText="Підтвердіть пароль" />
-    <Button onAction="#onRegister" text="Зареєструватись" />
+    <VBox spacing="10" alignment="CENTER">
+        <Button onAction="#onRegister" text="Зареєструватись" styleClass="register-button"/>
+        <Button onAction="#onLogin" text="Вже маєте акаунт? Увійти" styleClass="link-button"/>
+    </VBox>
     <Label fx:id="statusLabel" />
 </VBox>

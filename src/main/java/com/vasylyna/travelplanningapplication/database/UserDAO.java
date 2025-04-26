@@ -26,7 +26,6 @@ public class UserDAO {
             preparedStatement.executeUpdate();
             return true;
         } catch (SQLException e) {
-            e.printStackTrace();
             return false;
         }
     }
@@ -45,8 +44,29 @@ public class UserDAO {
 
             return resultSet.next();
         } catch (SQLException e) {
-            e.printStackTrace();
             return false;
+        }
+    }
+
+    public String getPasswordHash(String usernameOrEmail) {
+        String query = "SELECT password_hash FROM users WHERE username = ? OR email = ?";
+
+        try (
+                Connection databaseConnection = DatabaseManager.getInstance().getConnection();
+                PreparedStatement preparedStatement = databaseConnection.prepareStatement(query)
+        ) {
+            preparedStatement.setString(1, usernameOrEmail);
+            preparedStatement.setString(2, usernameOrEmail);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                return resultSet.getString("password_hash");
+            } else {
+                return null;
+            }
+        } catch (SQLException e) {
+            return null;
         }
     }
 }
