@@ -78,7 +78,7 @@ public class RegistrationController {
     @FXML
     protected void onLogin() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/vasylyna/travelplanningapplication/authorization/login.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/vasylyna/travelplanningapplication/authorization/login-view.fxml"));
             Parent root = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Авторизація");

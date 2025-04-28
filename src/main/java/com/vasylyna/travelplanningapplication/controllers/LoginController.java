@@ -47,7 +47,7 @@ public class LoginController {
             setStatus("Вхід успішний", "success");
 
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/vasylyna/travelplanningapplication/registration/registration-view.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/vasylyna/travelplanningapplication/main-page/main-page-view.fxml"));
                 Parent root = fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setTitle("Головна сторінка");

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.HBox?>
+<VBox alignment="TOP_CENTER" spacing="10.0" styleClass="vbox" stylesheets="@main-page.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.vasylyna.travelplanningapplication.controllers.MainPageController">
+    <padding>
+        <Insets bottom="70.0" left="20.0" right="20.0" top="30.0" />
+    </padding>
+
+    <Label text="Trip Planner" styleClass="title-label"/>
+    <HBox spacing="50" styleClass="hbox">
+        <Button  text="Фінанси" fx:id="financesButton" styleClass="button"/>
+        <Button text="Плани подорожей" fx:id="plansButton" styleClass="button"/>
+        <Button text="Чекліст речей" fx:id="toTakeButton" styleClass="button"/>
+        <Button text="Статистика" fx:id="statisticButton" styleClass="button"/>
+        <Button text="Вийти" fx:id="exitButton" styleClass="button"/>
+    </HBox>
+
+    <VBox fx:id="mapVBox" styleClass="map-vbox">
+
+    </VBox>
+</VBox>
