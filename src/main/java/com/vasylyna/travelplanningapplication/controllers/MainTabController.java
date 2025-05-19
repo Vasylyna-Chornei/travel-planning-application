@@ -1,18 +1,21 @@
 package com.vasylyna.travelplanningapplication.controllers;
 
+import com.vasylyna.travelplanningapplication.database.TransactionDAO;
+import com.vasylyna.travelplanningapplication.util.SceneLoaderUtil;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.SVGPath;
+import javafx.stage.Stage;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 
-public class MainPageController {
+public class MainTabController {
 
     @FXML
     private VBox mapVBox;
@@ -21,7 +24,7 @@ public class MainPageController {
         VBox.setMargin(mapVBox, new Insets(40, 0, 0, 0));
         try {
             Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(
-                    getClass().getClassLoader().getResourceAsStream("world.svg"));
+            getClass().getClassLoader().getResourceAsStream("world.svg"));
 
             NodeList paths = doc.getElementsByTagName("path");
 
@@ -46,4 +49,19 @@ public class MainPageController {
             mapVBox.getChildren().add(mapGroup);
         } catch (Exception e) {}
     }
+
+    @FXML
+    protected void onFinances() {
+        SceneLoaderUtil.loadScene("/com/vasylyna/travelplanningapplication/finances-tab/finances-tab-view.fxml",
+                (Stage) mapVBox.getScene().getWindow());
+
+    }
+
+    @FXML
+    protected void onExit() {
+        SceneLoaderUtil.loadScene("/com/vasylyna/travelplanningapplication/registration/registration-view.fxml",
+                (Stage) mapVBox.getScene().getWindow());
+    }
+
+
 }
