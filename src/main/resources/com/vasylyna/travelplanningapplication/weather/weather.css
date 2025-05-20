@@ -1,0 +1,175 @@
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-padding: 40px;
+}
+
+.weather-container {
+    -fx-spacing: 30px;
+    -fx-background-color: #f0f3f7;
+    -fx-background-radius: 10px;
+}
+
+.weather-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.hbox {
+    -fx-spacing: 20px;
+    -fx-alignment: center;
+    -fx-background-color: #fbfcff;
+    -fx-background-radius: 50px;
+    -fx-max-width: 840px;
+}
+
+.label {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2d3436;
+    -fx-padding: 7px;
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #2d3436;
+    -fx-padding: 16px 24px;
+    -fx-font-size: 16px;
+}
+
+.button:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+.button:pressed {
+    -fx-background-color: #d0d0d0;
+}
+
+.city-input {
+    -fx-pref-width: 300px;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-background-color: #e0e5ec;
+    -fx-background-radius: 10px;
+    -fx-text-fill: #2d3436;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 4, 0.2, 2, 1);
+}
+
+.city-input:focused {
+    -fx-effect: dropshadow(gaussian, #6f6fc6, 5, 0.3, 0, 0);
+}
+
+.search-button {
+    -fx-text-fill: #716b6b;
+    -fx-font-size: 20px;
+    -fx-padding: 8 16;
+}
+
+.search-button:hover {
+    -fx-background-color: transparent;
+    -fx-text-fill: #201919;
+    -fx-cursor: hand;
+}
+
+.weather-info-box {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20px;
+    -fx-background-radius: 10px;
+    -fx-max-width: 800px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);
+
+}
+
+.weather-header-label {
+    -fx-font-size: 18px;
+}
+
+.weather-city-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.forecast-label {
+    -fx-font-size: 14px;
+}
+
+.temperature-label {
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+}
+
+.very-hot-temperature {
+    -fx-text-fill: #ba0a0a;
+}
+
+.hot-temperature {
+    -fx-text-fill: #e63030;
+}
+
+.warm-temperature {
+    -fx-text-fill: #d1b95c;
+}
+
+.cold-temperature {
+    -fx-text-fill: #3030ff;
+}
+
+.coolly-temperature {
+    -fx-text-fill: #669fe6;
+}
+
+.weather-desc-label {
+    -fx-font-size: 15px;
+    -fx-text-fill: #2d3436;
+}
+
+.day-card {
+    -fx-pref-width: 250px;
+    -fx-padding: 10px;
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);
+    -fx-background-radius: 10;
+
+}
+
+.date-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 0 0 8 0;
+    -fx-alignment: center;
+}
+
+.forecast-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #34495e;
+    -fx-padding: 4px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.forecast-label:hover {
+    -fx-background-color: #ecf0f1;
+    -fx-text-fill: #2980b9;
+}
+.temperature-forecast {
+    -fx-font-weight: bold;
+}
+.very-hot-temperature-forecast {
+    -fx-fill: #ba0a0a;
+}
+
+.hot-temperature-forecast {
+    -fx-fill: #e63030;
+}
+
+.warm-temperature-forecast {
+    -fx-fill: #E67E22;
+}
+
+.cold-temperature-forecast {
+    -fx-fill: #3030ff;
+}
+
+.coolly-temperature-forecast {
+    -fx-fill: #669fe6;
+}

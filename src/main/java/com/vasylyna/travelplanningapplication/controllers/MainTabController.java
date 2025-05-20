@@ -1,6 +1,5 @@
 package com.vasylyna.travelplanningapplication.controllers;
 
-import com.vasylyna.travelplanningapplication.database.TransactionDAO;
 import com.vasylyna.travelplanningapplication.util.SceneLoaderUtil;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
@@ -63,5 +62,10 @@ public class MainTabController {
                 (Stage) mapVBox.getScene().getWindow());
     }
 
+    @FXML
+    protected void onWeather() {
+        SceneLoaderUtil.loadScene("/com/vasylyna/travelplanningapplication/weather/weather-view.fxml",
+                (Stage) mapVBox.getScene().getWindow());
+    }
 
 }

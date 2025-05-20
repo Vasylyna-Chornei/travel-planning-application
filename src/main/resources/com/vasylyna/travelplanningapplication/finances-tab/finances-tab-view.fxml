@@ -11,17 +11,12 @@
 
 <VBox fx:id="vBox" alignment="TOP_CENTER" spacing="30.0" styleClass="vbox" stylesheets="@finances-tab.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vasylyna.travelplanningapplication.controllers.FinancesTabController">
 
-    <padding>
-        <Insets bottom="30" left="20" right="20" top="30" />
-    </padding>
-
     <HBox fx:id="hBox" alignment="CENTER" spacing="50" styleClass="hbox">
         <Button fx:id="mainTabButton" onAction="#onMainTab" styleClass="button" text="Головна" />
         <Button fx:id="financesButton" styleClass="button" text="Фінанси" />
-        <Button fx:id="plansButton" styleClass="button" text="Плани подорожей" />
+        <Button fx:id="plansButton" styleClass="button" text="Подорожі" />
         <Button fx:id="toTakeButton" styleClass="button" text="Чекліст речей" />
-        <Button fx:id="statisticButton" styleClass="button" text="Статистика" />
-        <Button text="Погода" fx:id="weatherButton" styleClass="button"/>
+        <Button fx:id="weatherButton" onAction="#onWeather" styleClass="button" text="Погода"/>
         <Button fx:id="exitButton" onAction="#onExit" styleClass="button" text="Вийти" />
     </HBox>
 

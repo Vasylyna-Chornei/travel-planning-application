@@ -55,6 +55,12 @@ public class FinancesTabController {
     }
 
     @FXML
+    protected void onWeather() {
+        SceneLoaderUtil.loadScene("/com/vasylyna/travelplanningapplication/weather/weather-view.fxml",
+                (Stage) hBox.getScene().getWindow());
+    }
+
+    @FXML
     protected void onAddBudget() {
         onAddTransaction(true);
     }
@@ -156,7 +162,7 @@ public class FinancesTabController {
                     );
 
                     DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
-                    DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+                    DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
                     Label timeLabel = new Label(transaction.getDate().format(timeFormatter));
                     timeLabel.getStyleClass().add("time-label");
