@@ -1,5 +1,6 @@
 package com.vasylyna.travelplanningapplication.controllers;
 
+import com.vasylyna.travelplanningapplication.database.ChecklistDAO;
 import com.vasylyna.travelplanningapplication.database.TransactionDAO;
 import com.vasylyna.travelplanningapplication.database.UserDAO;
 import com.vasylyna.travelplanningapplication.util.PasswordUtil;
@@ -69,6 +70,7 @@ public class RegistrationController {
         if (success) {
             setStatus("Реєстрація успішна!", "success");
             TransactionDAO.createInitialBudgetForUser(userDAO.getUserID(email));
+            ChecklistDAO.createDefaultChecklist(userDAO.getUserID(email));
         } else {
             setStatus("Такий користувач вже існує.", "error");
         }

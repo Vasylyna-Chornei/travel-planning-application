@@ -1,0 +1,129 @@
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-padding: 40px;
+    -fx-spacing: 20px;
+    -fx-background-color: #f0f3f7;
+}
+
+.header {
+    -fx-spacing: 20px;
+    -fx-alignment: center;
+    -fx-background-color: #fbfcff;
+    -fx-background-radius: 50px;
+    -fx-max-width: 840px;
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #2d3436;
+    -fx-padding: 16px 24px;
+    -fx-font-size: 16px;
+}
+
+.button:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+.button:pressed {
+    -fx-background-color: #d0d0d0;
+}
+
+.text-field {
+    -fx-padding: 12px;
+    -fx-pref-width: 220px;
+    -fx-background-color: #e0e5ec;
+    -fx-background-radius: 10px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #2d3436;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 4, 0.3, 2, 1.5);
+}
+
+.text-field:focused {
+    -fx-effect: dropshadow(gaussian, #6f6fc6, 5, 0.3, 0, 0);
+}
+
+.add-item-button {
+    -fx-background-color: #6f6fc6;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-padding: 5px 8px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 4, 0.3, 2, 1.5);
+}
+
+.add-item-button:hover {
+    -fx-background-color: #4b4b9f;
+}
+
+.add-item-button:pressed {
+    -fx-background-color: #37377c;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane, .viewport {
+    -fx-background-color: transparent;
+    -fx-max-width: 500px;
+    -fx-pref-height: 600px;
+    -fx-background-radius: 12px;
+}
+
+.scroll-pane:focused {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.checklist-row {
+    -fx-padding: 10px;
+    -fx-alignment: center-left;
+}
+
+.scroll-pane .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 10px;
+    -fx-background-radius: 10px;
+}
+
+.delete-button {
+    -fx-padding: 5px 8px;
+    -fx-text-fill: red;
+    -fx-cursor: hand;
+}
+
+.delete-button:hover {
+    -fx-background-color: transparent;
+    -fx-text-fill: #a60000;
+}
+
+.checklist-row {
+    -fx-background-color: #e9ebf1;
+    -fx-background-radius: 8px;
+}
+
+.checklist-row .check-box {
+    -fx-cursor: hand;
+}
+
+.item-label-unchecked {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2d3436;
+    -fx-padding: 5px;
+}
+
+.item-label-checked {
+    -fx-font-size: 14px;
+    -fx-text-fill: rgba(45, 52, 54, 0.65);
+    -fx-padding: 5px;
+}
+
+.checkbox .box {
+    -fx-background-color: rgba(255, 255, 255, 0.77);
+    -fx-border-color: #6f6fc6;
+    -fx-border-width: 2;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-min-width: 18;
+    -fx-min-height: 18;
+}

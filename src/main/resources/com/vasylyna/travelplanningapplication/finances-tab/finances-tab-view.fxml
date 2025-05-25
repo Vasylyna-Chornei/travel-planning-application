@@ -15,7 +15,7 @@
         <Button onAction="#onMainTab" styleClass="button" text="Головна" />
         <Button styleClass="button" text="Фінанси" />
         <Button onAction="#onJourneys" styleClass="button" text="Подорожі" />
-        <Button styleClass="button" text="Чекліст речей" />
+        <Button onAction="#onChecklist" styleClass="button" text="Чекліст речей" />
         <Button onAction="#onWeather" styleClass="button" text="Погода"/>
         <Button onAction="#onExit" styleClass="button" text="Вийти" />
     </HBox>

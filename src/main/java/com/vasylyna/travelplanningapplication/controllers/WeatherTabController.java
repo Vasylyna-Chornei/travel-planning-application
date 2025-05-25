@@ -7,7 +7,6 @@ import com.vasylyna.travelplanningapplication.util.SpellingUtil;
 import com.vasylyna.travelplanningapplication.util.WeatherParserUtil;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
@@ -65,6 +64,12 @@ public class WeatherTabController {
     @FXML
     protected void onJourneys() {
         SceneLoaderUtil.loadScene("/com/vasylyna/travelplanningapplication/journeys-tab/journeys-tab-view.fxml",
+                (Stage) cityInput.getScene().getWindow());
+    }
+
+    @FXML
+    protected void onChecklist() {
+        SceneLoaderUtil.loadScene("/com/vasylyna/travelplanningapplication/checklist-tab/checklist-tab-view.fxml",
                 (Stage) cityInput.getScene().getWindow());
     }
 

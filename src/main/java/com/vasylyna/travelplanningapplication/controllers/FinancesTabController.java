@@ -67,6 +67,12 @@ public class FinancesTabController {
     }
 
     @FXML
+    protected void onChecklist() {
+        SceneLoaderUtil.loadScene("/com/vasylyna/travelplanningapplication/checklist-tab/checklist-tab-view.fxml",
+                (Stage) header.getScene().getWindow());
+    }
+
+    @FXML
     protected void onAddBudget() {
         onAddTransaction(true);
     }

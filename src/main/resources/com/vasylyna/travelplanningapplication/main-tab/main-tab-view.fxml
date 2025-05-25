@@ -8,14 +8,14 @@
 <?import javafx.scene.layout.VBox?>
 
 <StackPane stylesheets="@main-tab.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vasylyna.travelplanningapplication.controllers.MainTabController">
-    <VBox alignment="TOP_CENTER" spacing="10.0" styleClass="main-box">
+    <VBox alignment="TOP_CENTER" spacing="10.0">
 
         <Label text="Trip Planner" />
         <HBox spacing="50" styleClass="header">
             <Button styleClass="button" text="Головна" />
             <Button onAction="#onFinances" styleClass="button" text="Фінанси" />
             <Button onAction="#onJourneys" styleClass="button" text="Подорожі" />
-            <Button styleClass="button" text="Чекліст речей" />
+            <Button onAction="#onChecklist" styleClass="button" text="Чекліст речей" />
             <Button onAction="#onWeather" styleClass="button" text="Погода" />
             <Button onAction="#onExit" styleClass="button" text="Вийти" />
         </HBox>

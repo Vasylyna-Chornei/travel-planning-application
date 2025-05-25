@@ -37,7 +37,6 @@ public class JourneysTabController {
     protected void onFinances() {
         SceneLoaderUtil.loadScene("/com/vasylyna/travelplanningapplication/finances-tab/finances-tab-view.fxml",
                 (Stage) visitedCountriesList.getScene().getWindow());
-
     }
 
     @FXML
@@ -55,6 +54,12 @@ public class JourneysTabController {
     @FXML
     protected void onMainTab() {
         SceneLoaderUtil.loadScene("/com/vasylyna/travelplanningapplication/main-tab/main-tab-view.fxml",
+                (Stage) visitedCountriesList.getScene().getWindow());
+    }
+
+    @FXML
+    protected void onChecklist() {
+        SceneLoaderUtil.loadScene("/com/vasylyna/travelplanningapplication/checklist-tab/checklist-tab-view.fxml",
                 (Stage) visitedCountriesList.getScene().getWindow());
     }
 
@@ -175,6 +180,7 @@ public class JourneysTabController {
             });
 
             HBox row = new HBox(checkMark, label);
+            row.getStyleClass().add("country-row");
             row.setSpacing(10);
 
             label.setOnMouseClicked(e -> {

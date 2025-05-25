@@ -64,6 +64,12 @@ public class MainTabController {
                 (Stage) mapVBox.getScene().getWindow());
     }
 
+    @FXML
+    protected void onChecklist() {
+        SceneLoaderUtil.loadScene("/com/vasylyna/travelplanningapplication/checklist-tab/checklist-tab-view.fxml",
+                (Stage) mapVBox.getScene().getWindow());
+    }
+
     private void createMap() {
         try {
             Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(
