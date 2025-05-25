@@ -14,7 +14,7 @@
     -fx-font-weight: bold;
 }
 
-.hbox {
+.header {
     -fx-spacing: 20px;
     -fx-alignment: center;
     -fx-background-color: #fbfcff;
@@ -149,7 +149,6 @@
 
 .forecast-label:hover {
     -fx-background-color: #ecf0f1;
-    -fx-text-fill: #2980b9;
 }
 .temperature-forecast {
     -fx-font-weight: bold;

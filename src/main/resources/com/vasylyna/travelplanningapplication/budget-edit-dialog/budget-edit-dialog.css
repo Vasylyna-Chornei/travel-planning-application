@@ -2,9 +2,6 @@
     -fx-font-family: "Segoe UI", "Arial", sans-serif;
     -fx-padding: 40px;
     -fx-background-color: #f0f3f7;
-}
-
-.vbox {
     -fx-alignment: center;
     -fx-spacing: 20px;
 }

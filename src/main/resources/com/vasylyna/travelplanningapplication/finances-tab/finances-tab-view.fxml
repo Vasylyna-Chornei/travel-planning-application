@@ -9,41 +9,41 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox fx:id="vBox" alignment="TOP_CENTER" spacing="30.0" styleClass="vbox" stylesheets="@finances-tab.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vasylyna.travelplanningapplication.controllers.FinancesTabController">
+<VBox alignment="TOP_CENTER" spacing="30.0" stylesheets="@finances-tab.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vasylyna.travelplanningapplication.controllers.FinancesTabController">
 
-    <HBox fx:id="hBox" alignment="CENTER" spacing="50" styleClass="hbox">
-        <Button fx:id="mainTabButton" onAction="#onMainTab" styleClass="button" text="Головна" />
-        <Button fx:id="financesButton" styleClass="button" text="Фінанси" />
-        <Button fx:id="plansButton" styleClass="button" text="Подорожі" />
-        <Button fx:id="toTakeButton" styleClass="button" text="Чекліст речей" />
-        <Button fx:id="weatherButton" onAction="#onWeather" styleClass="button" text="Погода"/>
-        <Button fx:id="exitButton" onAction="#onExit" styleClass="button" text="Вийти" />
+    <HBox fx:id="header" alignment="CENTER" spacing="50" styleClass="header">
+        <Button onAction="#onMainTab" styleClass="button" text="Головна" />
+        <Button styleClass="button" text="Фінанси" />
+        <Button onAction="#onJourneys" styleClass="button" text="Подорожі" />
+        <Button styleClass="button" text="Чекліст речей" />
+        <Button onAction="#onWeather" styleClass="button" text="Погода"/>
+        <Button onAction="#onExit" styleClass="button" text="Вийти" />
     </HBox>
 
     <Region prefHeight="60" />
 
     <HBox alignment="CENTER" prefHeight="438.0" prefWidth="871.0" spacing="150">
         <VBox alignment="CENTER" spacing="20" styleClass="budget-box">
-            <Label fx:id="budgetLabelTitle" styleClass="label" text="Бюджет" />
+            <Label styleClass="label" text="Бюджет" />
             <HBox spacing="5" alignment="CENTER">
                 <Label fx:id="remainingBudgetLabel" onMouseClicked="#onChangeRemainingBudget" styleClass="clickable-label" text="0" />
                 <Label styleClass="label" text="/" />
                 <Label fx:id="totalBudgetLabel" onMouseClicked="#onChangeTotalBudget" styleClass="clickable-label" text="0" />
             </HBox>
             <HBox alignment="CENTER" spacing="20">
-                <Button fx:id="addButton" onAction="#onAddBudget" styleClass="budget-button" text="+" />
-                <Button fx:id="subtractButton" onAction="#onWithdrawBudget" styleClass="budget-button" text="-" />
+                <Button onAction="#onAddBudget" styleClass="budget-button" text="+" />
+                <Button onAction="#onWithdrawBudget" styleClass="budget-button" text="-" />
             </HBox>
         </VBox>
 
-        <VBox fx:id="transactionList" prefHeight="250.0" prefWidth="500" spacing="10" styleClass="transactions-list">
+        <VBox prefHeight="250.0" prefWidth="500" spacing="10" styleClass="transactions-list">
             <ListView fx:id="listView" prefHeight="480.0" prefWidth="500.0" />
         </VBox>
     </HBox>
 
     <Region prefHeight="18.0" prefWidth="871.0" />
 
-    <VBox alignment="CENTER" styleClass="progress-box">
+    <VBox alignment="CENTER">
         <padding>
             <Insets top="20" />
         </padding>

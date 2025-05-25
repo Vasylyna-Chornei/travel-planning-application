@@ -3,6 +3,7 @@ package com.vasylyna.travelplanningapplication.controllers;
 import com.vasylyna.travelplanningapplication.dtos.WeatherForecast;
 import com.vasylyna.travelplanningapplication.util.AlertDialogUtil;
 import com.vasylyna.travelplanningapplication.util.SceneLoaderUtil;
+import com.vasylyna.travelplanningapplication.util.SpellingUtil;
 import com.vasylyna.travelplanningapplication.util.WeatherParserUtil;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -25,7 +26,7 @@ import java.util.List;
 
 
 
-public class WeatherController {
+public class WeatherTabController {
 
     @FXML
     private TextField cityInput;
@@ -39,8 +40,6 @@ public class WeatherController {
     private VBox weatherBox;
     @FXML
     private HBox forecastBox;
-    @FXML
-    private ListView<String> forecastListView;
 
     private static final String API_KEY = "6cfb88f418a1355e9b79593e3bd30430";
 
@@ -64,9 +63,15 @@ public class WeatherController {
     }
 
     @FXML
+    protected void onJourneys() {
+        SceneLoaderUtil.loadScene("/com/vasylyna/travelplanningapplication/journeys-tab/journeys-tab-view.fxml",
+                (Stage) cityInput.getScene().getWindow());
+    }
+
+    @FXML
     protected void onSearchCity() {
         String city = cityInput.getText().trim();
-        String capitalizeCity = WeatherForecast.capitalizeFirstLetter(city);
+        String capitalizeCity = SpellingUtil.capitalizeFirstLetter(city);
 
         if (capitalizeCity.isEmpty()) {
             return;

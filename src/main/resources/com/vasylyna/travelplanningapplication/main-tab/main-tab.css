@@ -1,14 +1,11 @@
 .root {
     -fx-font-family: "Segoe UI", "Arial", sans-serif;
     -fx-padding: 0px;
-}
-
-.vbox {
     -fx-spacing: 0px;
     -fx-background-color: #f0f3f7;
 }
 
-.hbox {
+.header {
     -fx-spacing: 20px;
     -fx-alignment: center;
     -fx-background-color: #fbfcff;
@@ -46,4 +43,10 @@
     -fx-max-width: 500px;
     -fx-pref-height: 550px;
     -fx-min-height: 400px;
+}
+
+.country-count-label {
+    -fx-font-size: 25px;
+    -fx-text-fill: #3b3b60;
+    -fx-font-weight: bold;
 }

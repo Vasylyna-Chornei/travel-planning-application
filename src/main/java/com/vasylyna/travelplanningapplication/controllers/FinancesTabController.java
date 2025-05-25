@@ -22,7 +22,7 @@ import java.util.List;
 
 public class FinancesTabController {
     @FXML
-    private HBox hBox;
+    private HBox header;
 
     @FXML
     private Label totalBudgetLabel;
@@ -45,19 +45,25 @@ public class FinancesTabController {
     @FXML
     protected void onMainTab() {
         SceneLoaderUtil.loadScene("/com/vasylyna/travelplanningapplication/main-tab/main-tab-view.fxml",
-                (Stage) hBox.getScene().getWindow());
+                (Stage) header.getScene().getWindow());
     }
 
     @FXML
     protected void onExit() {
         SceneLoaderUtil.loadScene("/com/vasylyna/travelplanningapplication/registration/registration-view.fxml",
-                (Stage) hBox.getScene().getWindow());
+                (Stage) header.getScene().getWindow());
     }
 
     @FXML
     protected void onWeather() {
-        SceneLoaderUtil.loadScene("/com/vasylyna/travelplanningapplication/weather/weather-view.fxml",
-                (Stage) hBox.getScene().getWindow());
+        SceneLoaderUtil.loadScene("/com/vasylyna/travelplanningapplication/weather-tab/weather-tab-view.fxml",
+                (Stage) header.getScene().getWindow());
+    }
+
+    @FXML
+    protected void onJourneys() {
+        SceneLoaderUtil.loadScene("/com/vasylyna/travelplanningapplication/journeys-tab/journeys-tab-view.fxml",
+                (Stage) header.getScene().getWindow());
     }
 
     @FXML
@@ -74,7 +80,7 @@ public class FinancesTabController {
     @FXML
     protected void onAddTransaction(boolean isAddition) {
         UpdateBudgetController controller = SceneLoaderUtil.createDialogWindowAndReturnController("/com/vasylyna/travelplanningapplication/update-budget-dialog/update-budget-dialog-view.fxml",
-                "Транзакція", (Stage) hBox.getScene().getWindow(), false);
+                "Транзакція", (Stage) header.getScene().getWindow(), false);
 
         if (controller != null) {
             controller.setAddition(isAddition);
@@ -98,7 +104,7 @@ public class FinancesTabController {
     @FXML
     protected void openBudgetEditDialog(String budgetType) {
         BudgetEditDialogController controller = SceneLoaderUtil.createDialogWindowAndReturnController("/com/vasylyna/travelplanningapplication/budget-edit-dialog/budget-edit-dialog-view.fxml",
-                "Встановити бюджет", (Stage) hBox.getScene().getWindow(), false);
+                "Встановити бюджет", (Stage) header.getScene().getWindow(), false);
 
         if (controller != null) {
             controller.setBudgetType(budgetType);

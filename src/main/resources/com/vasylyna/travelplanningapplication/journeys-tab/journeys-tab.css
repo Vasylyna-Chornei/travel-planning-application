@@ -1,0 +1,106 @@
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-padding: 40px;
+    -fx-spacing: 20px;
+    -fx-background-color: #f0f3f7;
+}
+
+.header {
+    -fx-spacing: 20px;
+    -fx-alignment: center;
+    -fx-background-color: #fbfcff;
+    -fx-background-radius: 50px;
+    -fx-max-width: 840px;
+}
+
+.content-box {
+    -fx-padding: 60 0 0 0;
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #2d3436;
+    -fx-padding: 16px 24px;
+    -fx-font-size: 16px;
+}
+
+.button:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+.button:pressed {
+    -fx-background-color: #d0d0d0;
+}
+
+.addCountryButton {
+    -fx-padding: 10px;
+    -fx-background-radius: 10px;
+    -fx-background-color: #e4e4e8;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 4, 0.2, 1, 1);
+}
+
+.text-field {
+    -fx-padding: 12px;
+    -fx-max-width: 250px;
+    -fx-background-color: #e0e5ec;
+    -fx-background-radius: 10px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #2d3436;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 4, 0.2, 2, 2);
+}
+
+.text-field:focused {
+    -fx-effect: dropshadow(gaussian, #6f6fc6, 5, 0.3, 0, 0);
+}
+
+.header-visited, .header-to-visit {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2d3436;
+    -fx-padding: 10px 0;
+}
+
+.countries-list {
+    -fx-background-color: #fbfcff;
+    -fx-background-radius: 12px;
+    -fx-padding: 10 15 10 10;
+    -fx-spacing: 8px;
+    -fx-pref-width: 220px;
+    -fx-pref-height: 360px;
+}
+
+.country-label {
+    -fx-background-color: #e9ebf1;
+    -fx-alignment: center;
+    -fx-background-radius: 8px;
+    -fx-padding: 8px 12px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #2d3436;;
+}
+
+.scrolling-pane {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane, .viewport {
+    -fx-background-color: #e9ebf1;
+    -fx-pref-width: 260px;
+    -fx-pref-height: 360px;
+    -fx-background-radius: 12px;
+}
+
+.check-mark {
+    -fx-font-size: 20px;
+    -fx-background-color: #e2e7f6;
+    -fx-background-radius: 7px;
+}
+
+.check-mark:hover {
+    -fx-background-color: #d8dcec;
+}
+
+.check-mark:pressed {
+    -fx-background-color: #cacedd;
+}
+
+
