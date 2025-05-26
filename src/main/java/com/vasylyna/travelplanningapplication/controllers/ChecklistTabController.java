@@ -70,7 +70,7 @@ public class ChecklistTabController {
 
         boolean success = ChecklistDAO.addItem(name);
         if (success) {
-            AlertDialogUtil.showInfoDialog("Успіх", "Значення оновлено", "Пункт успішно додано до чекліста");
+            AlertDialogUtil.showInfoDialog("Успіх", "Значення додано", "Новий пункт успішно додано до чекліста");
             showAllItems();
             addItemField.clear();
         } else {

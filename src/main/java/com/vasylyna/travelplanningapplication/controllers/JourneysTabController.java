@@ -73,7 +73,6 @@ public class JourneysTabController {
         }
 
         String countryCode = CountryDAO.getCountryCodeByName(SpellingUtil.capitalizeFirstLetter(countryName));
-        System.out.println(countryCode);
         if (countryCode != null) {
             boolean success = CountryDAO.addCountry(SpellingUtil.capitalizeFirstLetter(countryName),countryCode, "visited_countries");
             if (success) {

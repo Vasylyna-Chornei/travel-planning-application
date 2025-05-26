@@ -3,10 +3,13 @@ package com.vasylyna.travelplanningapplication.util;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 public class SceneLoaderUtil {
+
+    private static final Image APP_ICON = new Image(SceneLoaderUtil.class.getResourceAsStream("/com/vasylyna/travelplanningapplication/images/plane-globe.png"));
 
     public static void createWindow(String fxmlPath, String title, Stage currentStage) {
         try {
@@ -14,6 +17,7 @@ public class SceneLoaderUtil {
             Parent root = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle(title);
+            stage.getIcons().add(APP_ICON);
             stage.setScene(new Scene(root));
             stage.setMaximized(true);
             stage.show();
@@ -24,6 +28,7 @@ public class SceneLoaderUtil {
 
         } catch (Exception e) {
             AlertDialogUtil.showErrorDialog("Помилка завантаження вікна", "Сталася помилка при завантаженні вікна. Спробуйте ще раз пізніше.");
+            e.printStackTrace();
         }
     }
 
@@ -36,6 +41,10 @@ public class SceneLoaderUtil {
             stage.setScene(new Scene(root));
             stage.initOwner(owner);
             stage.setResizable(resizable);
+
+            Image icon = new Image(SceneLoaderUtil.class.getResourceAsStream("/com/vasylyna/travelplanningapplication/images/accounting.png"));
+            stage.getIcons().add(icon);
+
             stage.show();
 
             return fxmlLoader.getController();
