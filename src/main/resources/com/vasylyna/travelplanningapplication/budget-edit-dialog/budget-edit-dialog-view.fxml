@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml" stylesheets="@budget-edit-dialog.css" fx:controller="com.vasylyna.travelplanningapplication.controllers.BudgetEditDialogController">
+    <Label text="Введіть нову суму:"/>
+    <TextField fx:id="amountField"/>
+    <HBox styleClass="hbox">
+        <Button text="Підтвердити" onAction="#handleConfirm"/>
+        <Button text="Скасувати" onAction="#handleCancel"/>
+    </HBox>
+</VBox>

@@ -1,5 +1,7 @@
 package com.vasylyna.travelplanningapplication.database;
 
+import com.vasylyna.travelplanningapplication.util.AlertDialogUtil;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -68,5 +70,27 @@ public class UserDAO {
         } catch (SQLException e) {
             return null;
         }
+    }
+
+    public int getUserID(String usernameOrEmail) {
+        int userID = -1;
+        String query = "SELECT id FROM users WHERE username = ? OR email = ?";
+
+        try (
+             Connection databaseConnection = DatabaseManager.getInstance().getConnection();
+             PreparedStatement preparedStatement = databaseConnection.prepareStatement(query)
+        ) {
+            preparedStatement.setString(1, usernameOrEmail);
+            preparedStatement.setString(2, usernameOrEmail);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                userID = resultSet.getInt("id");
+            }
+        } catch (SQLException e) {
+            AlertDialogUtil.showErrorDialog("Помилка", "Помилка з'єднання з базою даних");
+        }
+        return userID;
     }
 }

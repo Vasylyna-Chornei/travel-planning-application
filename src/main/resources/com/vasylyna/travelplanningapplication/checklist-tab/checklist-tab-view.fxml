@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ScrollPane?>
+<VBox alignment="TOP_CENTER" spacing="35.0" stylesheets="@checklist-tab.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vasylyna.travelplanningapplication.controllers.ChecklistTabController">
+    <HBox alignment="CENTER" spacing="50" styleClass="header">
+        <Button onAction="#onMainTab" styleClass="button" text="Головна" />
+        <Button onAction="#onFinances" styleClass="button" text="Фінанси" />
+        <Button onAction="#onJourneys" styleClass="button" text="Подорожі" />
+        <Button styleClass="button" text="Чекліст речей" />
+        <Button onAction="#onWeather" styleClass="button" text="Погода"/>
+        <Button onAction="#onExit" styleClass="button" text="Вийти" />
+    </HBox>
+
+    <HBox spacing="17" alignment="CENTER">
+        <TextField fx:id="addItemField" promptText="Введіть назву свого предмета"/>
+        <Button text="+" onAction="#onAddItem" styleClass="add-item-button"/>
+    </HBox>
+
+    <ScrollPane styleClass="scrolling-pane" fitToWidth="true">
+        <VBox fx:id="checklistContainer" spacing="10" />
+    </ScrollPane>
+</VBox>
